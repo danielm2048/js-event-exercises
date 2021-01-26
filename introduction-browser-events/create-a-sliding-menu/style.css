@@ -1,0 +1,8 @@
+span {
+	cursor: pointer;
+}
+
+#open,
+#close {
+	color: red;
+}

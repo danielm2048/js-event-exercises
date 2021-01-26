@@ -1,0 +1,33 @@
+#field {
+	position: relative;
+	width: 200px;
+	height: 150px;
+	border: 10px solid black;
+	background-color: #00ff00;
+	overflow: hidden;
+}
+
+#gate1 {
+	position: absolute;
+	top: 0;
+	left: 30%;
+}
+
+#gate2 {
+	position: absolute;
+	bottom: 0;
+	right: 30%;
+}
+
+#ball {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	transition: all 0.75s;
+}
+
+.clicked {
+	transform: rotate(180deg);
+}

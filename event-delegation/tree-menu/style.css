@@ -1,0 +1,17 @@
+.tree {
+	display: inline-block;
+}
+
+.tree li span {
+	cursor: pointer;
+}
+
+.tree li {
+	font-weight: 300;
+	color: #000000;
+}
+
+.tree li:hover {
+	font-weight: 800;
+	color: red;
+}
