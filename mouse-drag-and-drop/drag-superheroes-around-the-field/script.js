@@ -9,11 +9,15 @@ document.addEventListener("mousedown", (e) => {
     document.body.appendChild(target);
 
     function drag(pageX, pageY) {
+      // Constants to check if draggable element goes outside borders
+      const newX = pageX - shiftX + target.offsetWidth;
+      const newY = pageY - shiftY + target.offsetHeight;
+
       if (pageX - shiftX < 0) {
         target.style.left = "0px";
       }
-      else if (pageX - shiftX >= document.documentElement.clientWidth) {
-        target.style.left = document.documentElement.clientWidth + "px";
+      else if (newX >= document.documentElement.clientWidth) {
+        target.style.left = document.documentElement.clientWidth - shiftX - (target.offsetWidth / 2) + "px";
       }
       else {
         target.style.left = pageX - shiftX + "px";
@@ -22,8 +26,8 @@ document.addEventListener("mousedown", (e) => {
       if (pageY - shiftY < 0) {
         target.style.top = "0px";
       }
-      else if (pageY - shiftY >= document.documentElement.clientHeight) {
-        target.style.top = document.documentElement.clientHeight + "px";
+      else if (newY >= document.documentElement.clientHeight) {
+        target.style.top = document.documentElement.clientHeight - shiftY - (target.offsetHeight / 2) + "px";
       }
       else {
         target.style.top = pageY - shiftY + "px";
