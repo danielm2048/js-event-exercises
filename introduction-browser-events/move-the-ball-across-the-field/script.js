@@ -1,5 +1,4 @@
 const field = document.getElementById("field");
-const fieldStyle = window.getComputedStyle(field);
 const ball = document.getElementById("ball");
 
 const fieldCoordinates = field.getBoundingClientRect();

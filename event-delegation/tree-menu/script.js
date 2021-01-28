@@ -10,7 +10,6 @@ listItems.forEach(item => {
 tree.addEventListener("click", (e) => {
   if (e.target.tagName.toLowerCase() === "span") {
     const list = e.target.parentNode.querySelector("ul");
-    console.log(list);
     if (list) {
       list.hidden = !list.hidden;
     }
